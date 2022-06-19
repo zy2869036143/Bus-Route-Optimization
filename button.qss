@@ -1,0 +1,77 @@
+QPushButton{
+        background:qlineargradient(spread:pad, x1:0.460227, y1:0, x2:0.465818, y2:0.875, stop:0 rgba(192, 192, 192), stop:1 rgba(249,200,170));
+        border-radius:8px;
+        height: 30px;
+        border:2px solid rgb(169,170,170);
+}
+
+QPushButton:hover{
+        background:qlineargradient(spread:pad, x1:0.460227, y1:0, x2:0.443091, y2:0.898, stop:0 rgba(192, 192, 192), stop:1 rgba(250, 155, 155, 215))
+}
+
+QPushButton:hover:pressed{
+        background:qlineargradient(spread:pad, x1:0.460227, y1:0, x2:0.465818, y2:0.875, stop:0 rgba(170, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));
+}
+
+/* 未下拉时，QComboBox的样式 */
+QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    background: white;
+}
+
+/* 下拉后，整个下拉窗体样式 */
+QComboBox QAbstractItemView {
+    outline: 0px solid gray;   /* 选定项的虚框 */
+    border: 1px solid black;   /* 整个下拉窗体的边框 */
+    selection-background-color: lightgreen;   /* 整个下拉窗体被选中项的背景色 */
+}
+
+/* 下拉后，整个下拉窗体每项的样式 */
+QComboBox QAbstractItemView::item {
+    height: 50px;   /* 项的高度（设置pComboBox->setView(new QListView());后，该项才起作用） */
+}
+
+/* 下拉后，整个下拉窗体越过每项的样式 */
+QComboBox QAbstractItemView::item:hover {
+    background-color: lightgreen;   /* 整个下拉窗体越过每项的背景色 */
+}
+
+/* 下拉后，整个下拉窗体被选择的每项的样式 */
+QComboBox QAbstractItemView::item:selected {
+    background-color: lightgreen;
+}
+
+/* QComboBox中的垂直滚动条 */
+QComboBox QAbstractScrollArea QScrollBar:vertical {
+    width: 10px;
+    background-color: #d0d2d4;   /* 空白区域的背景色*/
+}
+
+QComboBox QAbstractScrollArea QScrollBar::handle:vertical {
+    border-radius: 5px;   /* 圆角 */
+    background: rgb(160,160,160);   /* 小方块的背景色深灰lightblue */
+}
+
+QComboBox QAbstractScrollArea QScrollBar::handle:vertical:hover {
+    background: rgb(90, 91, 93);   /* 越过小方块的背景色yellow */
+}
+
+/* 下拉框样式 */
+QComboBox::drop-down {
+    subcontrol-origin: padding;   /* 子控件在父元素中的原点矩形。如果未指定此属性，则默认为padding。 */
+    subcontrol-position: top right;   /* 下拉框的位置（右上） */
+    width: 15px;   /* 下拉框的宽度 */
+
+    border-left-width: 1px;   /* 下拉框的左边界线宽度 */
+    border-left-color: darkgray;   /* 下拉框的左边界线颜色 */
+    border-left-style: solid;   /* 下拉框的左边界线为实线 */
+    border-top-right-radius: 3px;   /* 下拉框的右上边界线的圆角半径（应和整个QComboBox右上边界线的圆角半径一致） */
+    border-bottom-right-radius: 3px;   /* 同上 */
+}
+
+
+
+
+
